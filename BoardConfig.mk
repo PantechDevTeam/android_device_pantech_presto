@@ -85,7 +85,7 @@ TARGET_USES_C2D_COMPOSITION := true
 TARGET_USES_ION := true
 
 # HDMI
-TARGET_HAVE_HDMI_OUT := false
+TARGET_QCOM_HDMI_OUT:= false
 
 # liblights on QCOM platforms
 TARGET_PROVIDES_LIBLIGHTS := true
