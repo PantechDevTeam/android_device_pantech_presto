@@ -9,8 +9,7 @@
 # in CAPs.
 
 #ANGLE
-PRODUCT_PACKAGES += \
-    libangle
+PRODUCT_PACKAGES += libangle
 
 #AUDIO_HARDWARE
 PRODUCT_PACKAGES += \
@@ -24,8 +23,7 @@ PRODUCT_PACKAGES += \
     audio_policy.conf
 
 #AMPLOADER
-PRODUCT_PACKAGES += \
-    amploader
+PRODUCT_PACKAGES += amploader
 
 #APPS
 PRODUCT_PACKAGES += \
@@ -33,8 +31,7 @@ PRODUCT_PACKAGES += \
     TSCalibration
 
 #BSON
-PRODUCT_PACKAGES += \
-    libbson
+PRODUCT_PACKAGES += libbson
 
 #BT
 PRODUCT_PACKAGES += \
@@ -43,12 +40,10 @@ PRODUCT_PACKAGES += \
     hcidump.sh
 
 #C2DColorConvert
-PRODUCT_PACKAGES += \
-    libc2dcolorconvert
+PRODUCT_PACKAGES += libc2dcolorconvert
 
 #CIMAX
-PRODUCT_PACKAGES += \
-    libcimax_spi
+PRODUCT_PACKAGES += libcimax_spi
 
 #CONNECTIVITY
 PRODUCT_PACKAGES += \
@@ -61,8 +56,7 @@ PRODUCT_PACKAGES += \
     curl
 
 #E2FSPROGS
-PRODUCT_PACKAGES += \
-    e2fsck
+PRODUCT_PACKAGES += e2fsck
 
 #GPS
 PRODUCT_PACKAGES += \
@@ -74,8 +68,7 @@ PRODUCT_PACKAGES += \
     libloc_api_v02
 
 #HDMID
-PRODUCT_PACKAGES += \
-    hdmid
+PRODUCT_PACKAGES += hdmid
 
 #HOSTAPD
 PRODUCT_PACKAGES += \
@@ -90,8 +83,7 @@ PRODUCT_PACKAGES += \
     hostapd.accept
 
 #I420COLORCONVERT
-PRODUCT_PACKAGES += \
-    libI420colorconvert
+PRODUCT_PACKAGES += libI420colorconvert
 
 #INIT
 PRODUCT_PACKAGES += \
@@ -137,8 +129,7 @@ PRODUCT_PACKAGES += \
     iptables
 
 #KERNEL_TESTS
-PRODUCT_PACKAGES += \
-    mm-audio-native-test
+PRODUCT_PACKAGES += mm-audio-native-test
 
 #KEYPAD
 PRODUCT_PACKAGES += \
@@ -167,12 +158,10 @@ PRODUCT_PACKAGES += \
     mm-qcamera-app
 
 #LIBCOPYBITP
-PRODUCT_PACKAGES += \
-    copybit.msm8660
+PRODUCT_PACKAGES += copybit.msm8660
 
 #LIBGESTURES
-PRODUCT_PACKAGES += \
-    libgestures
+PRODUCT_PACKAGES += libgestures
 
 #LIBGRALLOC
 PRODUCT_PACKAGES += \
@@ -181,20 +170,16 @@ PRODUCT_PACKAGES += \
     libmemalloc
 
 #LIBLIGHTS
-PRODUCT_PACKAGES += \
-    lights.msm8660
+PRODUCT_PACKAGES += lights.msm8660
 
 #LIBHWCOMPOSER
-PRODUCT_PACKAGES += \
-    hwcomposer.msm8660
+PRODUCT_PACKAGES += hwcomposer.msm8660
 
 #LIBAUDIOPARAM -- Exposing AudioParameter as dynamic library for SRS TruMedia to work
-PRODUCT_PACKAGES += \
-    libaudioparameter
+PRODUCT_PACKAGES += libaudioparameter
 
 #LIBOPENCOREHW
-PRODUCT_PACKAGES += \
-    libopencorehw
+PRODUCT_PACKAGES += libopencorehw
 
 #LIBOVERLAY
 PRODUCT_PACKAGES += \
@@ -202,36 +187,28 @@ PRODUCT_PACKAGES += \
     overlay.default
 
 #LIBGENLOCK
-PRODUCT_PACKAGES += \
-    libgenlock
+PRODUCT_PACKAGES += libgenlock
 
 #LIBPERFLOCK
-PRODUCT_PACKAGES += \
-    org.codeaurora.Performance
+PRODUCT_PACKAGES += org.codeaurora.Performance
 
 #LIBQCOMUI
-PRODUCT_PACKAGES += \
-    libQcomUI
+#PRODUCT_PACKAGES += libQcomUI
 
 #LIBQDUTILS
-PRODUCT_PACKAGES += \
-    libqdutils
+PRODUCT_PACKAGES += libqdutils
 
 #LIBQDMETADATA
-PRODUCT_PACKAGES += \
-    libqdMetaData
+PRODUCT_PACKAGES += libqdMetaData
 
 #LIBPOWER
-PRODUCT_PACKAGES += \
-    power.qcom
+PRODUCT_PACKAGES += power.qcom
 
 #LOC_API
-PRODUCT_PACKAGES += \
-    libloc_api-rpc-qc
+PRODUCT_PACKAGES += libloc_api-rpc-qc
 
 #MEDIA_PROFILES
-PRODUCT_PACKAGES += \
-    media_profiles.xml
+PRODUCT_PACKAGES += media_profiles.xml
 
 #MM_AUDIO
 PRODUCT_PACKAGES += \
@@ -300,8 +277,7 @@ PRODUCT_PACKAGES += \
     pvplayer_engine_test
 
 #PPP
-PRODUCT_PACKAGES += \
-    ip-up-vpn
+PRODUCT_PACKAGES += ip-up-vpn
 
 #PVOMX
 PRODUCT_PACKAGES += \
@@ -319,12 +295,10 @@ PRODUCT_PACKAGES += \
     libqsap_sdk
 
 #STK
-PRODUCT_PACKAGES += \
-    Stk
+PRODUCT_PACKAGES += Stk
 
 #STM LOG
-PRODUCT_PACKAGES += \
-    libstm-log
+PRODUCT_PACKAGES += libstm-log
 
 #TSLIB_EXTERNAL
 PRODUCT_PACKAGES += \
@@ -342,13 +316,10 @@ PRODUCT_PACKAGES += \
     ts
 
 #QRGND
-PRODUCT_PACKAGES += \
-    qrngd \
-    qrngtest
+PRODUCT_PACKAGES += qrngd
 
 #WPA
-PRODUCT_PACKAGES += \
-    wpa_supplicant.conf
+PRODUCT_PACKAGES += wpa_supplicant.conf
 
 #ZLIB
 PRODUCT_PACKAGES += \
@@ -356,55 +327,6 @@ PRODUCT_PACKAGES += \
     minigzip \
     libunz
 
-#Charger
-PRODUCT_PACKAGES += charger charger_res_images
-
 #VT_JNI
-PRODUCT_PACKAGES += \
-    libvt_jni
-
-# Live Wallpapers
-PRODUCT_PACKAGES += \
-    LiveWallpapers \
-    LiveWallpapersPicker \
-    VisualizationWallpapers \
-    librs_jni
-
-# Filesystem management tools
-PRODUCT_PACKAGES += \
-    make_ext4fs \
-    setup_fs
-
-PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.hardware.camera.flash-autofocus.xml:system/etc/permissions/android.hardware.camera.flash-autofocus.xml \
-    frameworks/native/data/etc/android.hardware.camera.front.xml:system/etc/permissions/android.hardware.camera.front.xml \
-    frameworks/native/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml \
-    frameworks/native/data/etc/android.hardware.telephony.cdma.xml:system/etc/permissions/android.hardware.telephony.cdma.xml \
-    frameworks/native/data/etc/android.hardware.location.gps.xml:system/etc/permissions/android.hardware.location.gps.xml \
-    frameworks/native/data/etc/android.hardware.touchscreen.multitouch.jazzhand.xml:system/etc/permissions/android.hardware.touchscreen.multitouch.jazzhand.xml \
-    frameworks/native/data/etc/android.hardware.wifi.xml:system/etc/permissions/android.hardware.wifi.xml \
-    frameworks/native/data/etc/android.hardware.wifi.direct.xml:system/etc/permissions/android.hardware.wifi.direct.xml \
-    frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml \
-    frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
-    frameworks/native/data/etc/android.hardware.sensor.proximity.xml:system/etc/permissions/android.hardware.sensor.proximity.xml \
-    frameworks/native/data/etc/android.hardware.sensor.light.xml:system/etc/permissions/android.hardware.sensor.light.xml \
-    frameworks/native/data/etc/android.hardware.sensor.gyroscope.xml:system/etc/permissions/android.hardware.sensor.gyroscope.xml \
-    frameworks/native/data/etc/android.hardware.usb.accessory.xml:system/etc/permissions/android.hardware.usb.accessory.xml \
-    frameworks/native/data/etc/android.hardware.usb.host.xml:system/etc/permissions/android.hardware.usb.host.xml \
-    packages/wallpapers/LivePicker/android.software.live_wallpaper.xml:system/etc/permissions/android.software.live_wallpaper.xml \
-
-# Media configuration
-PRODUCT_COPY_FILES += \
-    device/pantech/presto/media/media_profiles.xml:system/etc/media_profiles.xml \
-    device/pantech/presto/media/media_codecs.xml:system/etc/media_codecs.xml
-
-# Propertys spacific for this device
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.vendor.extension_library=/system/lib/libqc-opt.so
-
-#LLVM for RenderScript
-#use qcom LLVM
-$(call inherit-product, device/pantech/presto/llvm-select.mk)
-
-$(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
+#PRODUCT_PACKAGES += libvt_jni
 

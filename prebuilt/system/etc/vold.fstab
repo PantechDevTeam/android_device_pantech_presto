@@ -27,6 +27,6 @@
 
 #<-- p11171 dongseok modified
 #dev_mount sdcard /mnt/sdcard auto /devices/platform/msm_sdcc.3/mmc_host /devices/platform/msm_sdcc.1/mmc_host
-dev_mount sdcard /mnt/sdcard auto /devices/platform/msm_sdcc.1/mmc_host
+dev_mount sdcard /mnt/sdcard 27 /devices/platform/msm_sdcc.1/mmc_host
 dev_mount sdcard /mnt/sdcard/external_sd auto /devices/platform/msm_sdcc.3/mmc_host
 #-->

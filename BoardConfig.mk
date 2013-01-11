@@ -90,9 +90,6 @@ TARGET_QCOM_HDMI_OUT:= false
 # liblights on QCOM platforms
 TARGET_PROVIDES_LIBLIGHTS := true
 
-#LLVM for RenderScript use qcom LLVM
-BOARD_USE_QCOM_LLVM_CLANG_RS := false
-
 # Platform
 TARGET_BOARD_PLATFORM := msm8660
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno200

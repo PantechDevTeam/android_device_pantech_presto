@@ -25,6 +25,9 @@
 #include <linux/time.h>
 #endif
 
+#ifdef __KERNEL__
+#include <linux/ion.h>
+#endif
 #define MSM_CAM_IOCTL_MAGIC 'm'
 
 #define MSM_CAM_IOCTL_GET_SENSOR_INFO \

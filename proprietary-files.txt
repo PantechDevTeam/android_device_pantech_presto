@@ -1,6 +1,6 @@
 # Prebuilt libraries
 #lib/libgenlock.so
-lib/libQcomUI.so
+#lib/libQcomUI.so
 
 # Prebuilt libraries from CodeAurora
 #lib/libDivxDrm.so
