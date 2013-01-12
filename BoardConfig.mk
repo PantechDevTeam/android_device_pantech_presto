@@ -98,6 +98,9 @@ TARGET_BOARD_PLATFORM_GPU := qcom-adreno200
 BOARD_USES_QCOM_HARDWARE := true
 BOARD_USES_QCOM_LIBS := true
 
+# Samsung EMMC brick bug
+BOARD_SUPPRESS_EMMC_WIPE : = true
+
 # Scorpion optimizations
 TARGET_USE_SCORPION_BIONIC_OPTIMIZATION := true
 TARGET_USE_SCORPION_PLD_SET := true
@@ -144,7 +147,7 @@ TARGET_KERNEL_SOURCE := kernel/pantech/p9070
 
 # Kernel info
 BOARD_KERNEL_BASE := 0x40200000
-BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=qcom loglevel=0
+BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=qcom loglevel=0 no_console_suspend=1
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_FORCE_RAMDISK_ADDRESS := 0x41500000
 
