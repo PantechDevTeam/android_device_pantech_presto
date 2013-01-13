@@ -41,8 +41,6 @@ lib/libaudcal.so
 lib/libaudioalsa.so
 lib/libaudioparsers.so
 lib/lib_iec_60958_61937.so
-lib/hw/audio.primary.msm8660.so
-lib/hw/audio_policy.msm8660.so
 
 # bins
 bin/ATFWD-daemon
