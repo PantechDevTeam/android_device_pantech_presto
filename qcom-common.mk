@@ -87,35 +87,36 @@ PRODUCT_PACKAGES += libI420colorconvert
 
 #INIT
 PRODUCT_PACKAGES += \
-    init.qcom.composition_type.sh \
-    init.target.8x25.sh \
+    init.presto.rc \
+#    init.qcom.composition_type.sh \
+#    init.target.8x25.sh \
     init.qcom.mdm_links.sh \
     init.qcom.modem_links.sh \
-    init.qcom.thermal_conf.sh \
-    init.qcom.sensor.sh \
+#    init.qcom.thermal_conf.sh \
+#    init.qcom.sensor.sh \
     init.target.rc \
     init.qcom.bt.sh \
     init.qcom.coex.sh \
     init.qcom.fm.sh \
-    init.qcom.early_boot.sh \
+#    init.qcom.early_boot.sh \
     init.qcom.post_boot.sh \
-    init.qcom.syspart_fixup.sh \
+#    init.qcom.syspart_fixup.sh \
     init.qcom.rc \
-    init.qcom.sdio.sh \
+#    init.qcom.sdio.sh \
     init.qcom.sh \
     init.qcom.class_core.sh \
     init.qcom.class_main.sh \
     init.qcom.wifi.sh \
     vold.fstab \
-    init.qcom.ril.path.sh \
-    init.qcom.ril.sh \
+#    init.qcom.ril.path.sh \
+#    init.qcom.ril.sh \
     init.qcom.usb.rc \
     init.qcom.usb.sh \
-    usf_post_boot.sh \
+#    usf_post_boot.sh \
     init.qcom.efs.sync.sh \
     ueventd.qcom.rc \
-    init.ath3k.bt.sh \
-    init.qcom.audio.sh
+#    init.ath3k.bt.sh \
+#    init.qcom.audio.sh
 
 #IPROUTE2
 PRODUCT_PACKAGES += \

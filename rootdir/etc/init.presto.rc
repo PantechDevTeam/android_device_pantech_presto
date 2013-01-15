@@ -1,0 +1,12 @@
+#
+# Add additional services here
+#
+
+# Sensor daemon
+service orientationd /system/bin/orientationd
+    user compass
+    group input
+
+service geomagneticd /system/bin/geomagneticd
+    user compass
+    group system input
