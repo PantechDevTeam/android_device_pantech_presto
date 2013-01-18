@@ -27,6 +27,7 @@
 
 import init.qcom.usb.rc
 import init.target.rc
+import init.presto.target.rc
 
 on init
     # Set permissions for persist partition

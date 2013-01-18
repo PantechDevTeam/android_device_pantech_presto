@@ -127,6 +127,9 @@ PRODUCT_PACKAGES += \
     VisualizationWallpapers \
     librs_jni
 
+# Init presto
+PRODUCT_PACKAGES += init.presto.target.rc
+
 # lpm
 PRODUCT_PACKAGES += \
     lpm.rc \
@@ -169,7 +172,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.mdpcomp.logs=0 \
     debug.sf.hw=1 \
     dev.pm.dyn_samplingrate=1 \
-    ro.opengles.version=131072
+    ro.sf.lcd_density=240
 
 # misc
 PRODUCT_PROPERTY_OVERRIDES += \
