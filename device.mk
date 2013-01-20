@@ -69,8 +69,8 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/recovery/postrecoveryboot.sh:recovery/system/bin/postrecoveryboot.sh
 
 #NVRAM setup
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/prebuilt/system/vendor/firmware/nvram_net.txt:system/vendor/firmware/nvram_net.txt
+#PRODUCT_COPY_FILES += \
+#    $(LOCAL_PATH)/prebuilt/system/vendor/firmware/nvram_net.txt:system/vendor/firmware/nvram_net.txt
 
 # Permissions
 PRODUCT_COPY_FILES += \
