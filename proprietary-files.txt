@@ -193,5 +193,5 @@ lib/libsky_rawdata.so
 lib/libskyreset.so
 lib/libsky_rftest.so
 lib/libskytestclient.so
-lib/libsky_touch.so
+#lib/libsky_touch.so
 lib/libsky_wifi.so
