@@ -151,7 +151,7 @@ bin/netmgrd
 bin/qcks
 bin/qmiproxy
 bin/qmuxd
-#bin/rild
+bin/rild
 bin/rmt_storage
 lib/libdsi_netctrl.so
 lib/libdsutils.so
@@ -165,7 +165,7 @@ lib/libqueue.so
 #lib/libreference-ril.so
 lib/libril-qc-qmi-1.so
 lib/libril-qcril-hook-oem.so
-#lib/libril.so
+lib/libril.so
 
 # wifi
 #etc/wifi/wpa_supplicant.conf
