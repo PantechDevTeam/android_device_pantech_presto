@@ -40,6 +40,10 @@ PRODUCT_COPY_FILES += \
 
 #----------------------------------------------------------------------
 
+# Keyboardy
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/prebuilt/system/usr/keylayout/tki_input.kl:system/usr/keylayout/tki_input.kl
+
 # Audio policy
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilt/system/etc/audio_policy.conf:system/etc/audio_policy.conf

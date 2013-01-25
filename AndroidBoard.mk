@@ -21,62 +21,6 @@ include $(CLEAR_VARS)
 ALL_PREBUILT += $(INSTALLED_KERNEL_TARGET)
 
 #----------------------------------------------------------------------
-# Key mappings
-#----------------------------------------------------------------------
-
-include $(CLEAR_VARS)
-LOCAL_MODULE       := ffa-keypad.kl
-LOCAL_MODULE_TAGS  := optional
-LOCAL_MODULE_CLASS := ETC
-LOCAL_SRC_FILES    := prebuilt/system/usr/keylayout/$(LOCAL_MODULE)
-LOCAL_MODULE_PATH  := $(TARGET_OUT_KEYLAYOUT)
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
-LOCAL_MODULE       := fluid-keypad.kl
-LOCAL_MODULE_TAGS  := optional
-LOCAL_MODULE_CLASS := ETC
-LOCAL_SRC_FILES    := prebuilt/system/usr/keylayout/$(LOCAL_MODULE)
-LOCAL_MODULE_PATH  := $(TARGET_OUT_KEYLAYOUT)
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
-LOCAL_MODULE        := 8660_handset.kl
-LOCAL_MODULE_TAGS   := optional
-LOCAL_MODULE_CLASS  := ETC
-LOCAL_SRC_FILES     := prebuilt/system/usr/keylayout/$(LOCAL_MODULE)
-LOCAL_MODULE_PATH   := $(TARGET_OUT_KEYLAYOUT)
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
-LOCAL_MODULE        := cyttsp-i2c.kl
-LOCAL_MODULE_TAGS   := optional
-LOCAL_MODULE_CLASS  := ETC
-LOCAL_SRC_FILES     := prebuilt/system/usr/keylayout/$(LOCAL_MODULE)
-LOCAL_MODULE_PATH   := $(TARGET_OUT_KEYLAYOUT)
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
-LOCAL_SRC_FILES     := prebuilt/system/usr/keychars/ffa-keypad_qwerty.kcm
-LOCAL_MODULE_TAGS   := optional
-include $(BUILD_KEY_CHAR_MAP)
-
-include $(CLEAR_VARS)
-LOCAL_SRC_FILES     := prebuilt/system/usr/keychars/ffa-keypad_numeric.kcm
-LOCAL_MODULE_TAGS   := optional
-include $(BUILD_KEY_CHAR_MAP)
-
-include $(CLEAR_VARS)
-LOCAL_SRC_FILES     := prebuilt/system/usr/keychars/fluid-keypad_qwerty.kcm
-LOCAL_MODULE_TAGS   := optional
-include $(BUILD_KEY_CHAR_MAP)
-
-include $(CLEAR_VARS)
-LOCAL_SRC_FILES     := prebuilt/system/usr/keychars/fluid-keypad_numeric.kcm
-LOCAL_MODULE_TAGS   := optional
-include $(BUILD_KEY_CHAR_MAP)
-
-#----------------------------------------------------------------------
 # Configuration scripts
 #----------------------------------------------------------------------
 

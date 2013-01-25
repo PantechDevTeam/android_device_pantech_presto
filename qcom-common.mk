@@ -131,17 +131,6 @@ PRODUCT_PACKAGES += \
 #KERNEL_TESTS
 PRODUCT_PACKAGES += mm-audio-native-test
 
-#KEYPAD
-PRODUCT_PACKAGES += \
-    ffa-keypad_qwerty.kcm \
-    ffa-keypad_numeric.kcm \
-    fluid-keypad_qwerty.kcm \
-    fluid-keypad_numeric.kcm \
-    8660_handset.kl \
-    cyttsp-i2c.kl \
-    ffa-keypad.kl \
-    fluid-keypad.kl
-
 #KS
 PRODUCT_PACKAGES += \
     ks \
