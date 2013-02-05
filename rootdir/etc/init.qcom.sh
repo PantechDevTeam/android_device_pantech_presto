@@ -27,7 +27,7 @@
 #
 
 target=`getprop ro.board.platform`
-
+platformid=`cat /sys/devices/system/soc/soc0/id`
 #
 # Function to start sensors for DSPS enabled platforms
 #
@@ -76,7 +76,7 @@ done
 # Start gpsone_daemon for SVLTE Type I & II devices
 #
 case "$target" in
-        "msm7630_fusion" | "msm8960")
+        "msm7630_fusion" | "msm8960" | "msm7627a")
         start gpsone_daemon
 esac
 case "$baseband" in
@@ -119,7 +119,9 @@ case "$target" in
         esac
         ;;
     "msm8960")
-        start_sensors
+        if [ "$platformid" != "116" ] && [ "$platformid" != "142" ]; then
+            start_sensors
+        fi
         case "$baseband" in
             "msm")
 		start_battery_monitor;;
@@ -135,5 +137,13 @@ case "$target" in
         ;;
     "msm8974")
         start_sensors
+
+        platformvalue=`cat /sys/devices/system/soc/soc0/hw_platform`
+        case "$platformvalue" in
+             "Fluid")
+                 start profiler_daemon;;
+             "Liquid")
+                 start profiler_daemon;;
+        esac
         ;;
 esac

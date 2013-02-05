@@ -40,17 +40,9 @@ PRODUCT_COPY_FILES += \
 
 #----------------------------------------------------------------------
 
-# Keyboardy
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/prebuilt/system/usr/keylayout/tki_input.kl:system/usr/keylayout/tki_input.kl
-
 # Audio policy
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilt/system/etc/audio_policy.conf:system/etc/audio_policy.conf
-
-# ueventd
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/etc/ueventd.rc:root/ueventd.rc
 
 # BT firmware
 PRODUCT_COPY_FILES += \
@@ -61,10 +53,22 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/recovery.fstab:root/recovery.fstab
 
+# Firmware
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/prebuilt/system/etc/firmware/a225_pfp.fw:system/etc/firmware/a225_pfp.fw \
+    $(LOCAL_PATH)/prebuilt/system/etc/firmware/a225_pm4.fw:system/etc/firmware/a225_pm4.fw \
+    $(LOCAL_PATH)/prebuilt/system/etc/firmware/a225p5_pm4.fw:system/etc/firmware/a225p5_pm4.fw \
+    $(LOCAL_PATH)/prebuilt/system/etc/firmware/a300_pfp.fw:system/etc/firmware/a300_pfp.fw \
+    $(LOCAL_PATH)/prebuilt/system/etc/firmware/a300_pm4.fw:system/etc/firmware/a300_pm4.fw \
+
 # IDC
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilt/system/usr/idc/pantech_earjack.idc:system/usr/idc/pantech_earjack.idc \
     $(LOCAL_PATH)/prebuilt/system/usr/idc/qt602240_ts_input.idc:system/usr/idc/qt602240_ts_input.idc
+
+# Keyboardy
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/prebuilt/system/usr/keylayout/tki_input.kl:system/usr/keylayout/tki_input.kl
 
 # Media configuration
 PRODUCT_COPY_FILES += \
@@ -102,6 +106,10 @@ PRODUCT_COPY_FILES += \
 # Thermal configuration
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilt/system/etc/thermald.conf:system/etc/thermald.conf
+
+# ueventd
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/prebuilt/root/ueventd.rc:root/ueventd.rc
 
 # Wifi (bcmdhd)
 #WIFI_BAND := 802_11_ABG

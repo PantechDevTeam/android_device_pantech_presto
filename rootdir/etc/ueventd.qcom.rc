@@ -38,6 +38,8 @@
 /dev/smd0                 0660   system     system
 /dev/smd4                 0660   system     system
 /dev/smd_cxm_qmi          0640   radio      radio
+/dev/smd5                 0660   system     system
+/dev/smd6                 0660   system     system
 /dev/smd7                 0660   bluetooth  bluetooth
 /dev/rfcomm0              0660   bluetooth  bluetooth
 /dev/smdcntl0             0640   radio      radio
@@ -87,6 +89,7 @@
 /dev/msm_wmapro           0660   system     audio
 /dev/msm_amrnb            0660   system     audio
 /dev/msm_amrwb            0660   system     audio
+/dev/msm_amrwbplus        0660   system     audio
 /dev/msm_aac              0660   system     audio
 /dev/msm_multi_aac        0660   system     audio
 /dev/msm_aac_in           0660   system     audio
@@ -101,12 +104,16 @@
 /dev/sdio_tty_ciq_00      0660   system     system
 /dev/tty_sdio_00          0660   system     system
 /dev/ttyGS0               0660   system     system
+/dev/i2c-0                0660   media       media
 /dev/i2c-5                0660   media       media
 
 # DVB devices
 /dev/dvb/adapter0/demux*  0444   media       media
 /dev/dvb/adapter0/dvr*    0664   media       media
 /dev/dvb/adapter0/video*  0664   media       media
+/dev/avtimer              0644   media       media
+
+/sys/devices/i2c-12/12-*  pollrate_ms 0664 system system
 
 # sensors
-/sys/devices/i2c-12/12-*  pollrate_ms 0664 system system
+/dev/sensors              0640   system      system
