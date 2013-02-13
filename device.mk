@@ -28,12 +28,12 @@ PRODUCT_COPY_FILES += device/common/gps/gps.conf_US_SUPL:system/etc/gps.conf
 PRODUCT_AAPT_CONFIG := normal hdpi
 PRODUCT_AAPT_PREF_CONFIG := hdpi
 
-# overlays
+# Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
 #----------------------------------------------------------------------
 
-LOCAL_KERNEL := device/pantech/presto/prebuilt/kernel/kernel
+LOCAL_KERNEL := $(LOCAL_PATH)/prebuilt/kernel/kernel
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_KERNEL):kernel
@@ -75,41 +75,17 @@ PRODUCT_COPY_FILES += \
     device/pantech/presto/media/media_profiles.xml:system/etc/media_profiles.xml \
     device/pantech/presto/media/media_codecs.xml:system/etc/media_codecs.xml
 
-# Needed to reset bootmode when leaving recovery
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/recovery/postrecoveryboot.sh:recovery/root/sbin/postrecoveryboot.sh \
-    $(LOCAL_PATH)/recovery/postrecoveryboot.sh:recovery/system/bin/postrecoveryboot.sh
-
-#NVRAM setup
-#PRODUCT_COPY_FILES += \
-#    $(LOCAL_PATH)/prebuilt/system/vendor/firmware/nvram_net.txt:system/vendor/firmware/nvram_net.txt
-
 # Permissions
 PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.hardware.camera.flash-autofocus.xml:system/etc/permissions/android.hardware.camera.flash-autofocus.xml \
-    frameworks/native/data/etc/android.hardware.camera.front.xml:system/etc/permissions/android.hardware.camera.front.xml \
-    frameworks/native/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml \
-    frameworks/native/data/etc/android.hardware.telephony.cdma.xml:system/etc/permissions/android.hardware.telephony.cdma.xml \
-    frameworks/native/data/etc/android.hardware.location.gps.xml:system/etc/permissions/android.hardware.location.gps.xml \
-    frameworks/native/data/etc/android.hardware.touchscreen.multitouch.jazzhand.xml:system/etc/permissions/android.hardware.touchscreen.multitouch.jazzhand.xml \
-    frameworks/native/data/etc/android.hardware.wifi.xml:system/etc/permissions/android.hardware.wifi.xml \
-    frameworks/native/data/etc/android.hardware.wifi.direct.xml:system/etc/permissions/android.hardware.wifi.direct.xml \
-    frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml \
-    frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
-    frameworks/native/data/etc/android.hardware.sensor.proximity.xml:system/etc/permissions/android.hardware.sensor.proximity.xml \
-    frameworks/native/data/etc/android.hardware.sensor.light.xml:system/etc/permissions/android.hardware.sensor.light.xml \
-    frameworks/native/data/etc/android.hardware.sensor.gyroscope.xml:system/etc/permissions/android.hardware.sensor.gyroscope.xml \
-    frameworks/native/data/etc/android.hardware.usb.accessory.xml:system/etc/permissions/android.hardware.usb.accessory.xml \
-    frameworks/native/data/etc/android.hardware.usb.host.xml:system/etc/permissions/android.hardware.usb.host.xml \
-    packages/wallpapers/LivePicker/android.software.live_wallpaper.xml:system/etc/permissions/android.software.live_wallpaper.xml
+    frameworks/native/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml
 
 # Thermal configuration
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilt/system/etc/thermald.conf:system/etc/thermald.conf
 
-# ueventd
+# Ueventd
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/prebuilt/root/ueventd.rc:root/ueventd.rc
+    $(LOCAL_PATH)/rootdir/etc/ueventd.rc:root/ueventd.rc
 
 # Wifi (bcmdhd)
 #WIFI_BAND := 802_11_ABG
@@ -117,61 +93,22 @@ PRODUCT_COPY_FILES += \
 
 #----------------------------------------------------------------------
 
-# bugmailer
-PRODUCT_PACKAGES += send_bug
-PRODUCT_COPY_FILES += \
-    system/extras/bugmailer/bugmailer.sh:system/bin/bugmailer.sh \
-    system/extras/bugmailer/send_bug:system/bin/send_bug
-
-#Charger
-PRODUCT_PACKAGES += \
-    charger_res_images \
-    charger
-
-# Filesystem management tools
-PRODUCT_PACKAGES += \
-    make_ext4fs \
-    setup_fs
-
 # fstab.qcom
 PRODUCT_PACKAGES += fstab.qcom
 
-# Live Wallpapers
-PRODUCT_PACKAGES += \
-    LiveWallpapers \
-    LiveWallpapersPicker \
-    VisualizationWallpapers \
-    librs_jni
-
 # Init presto
-PRODUCT_PACKAGES += init.presto.target.rc
+PRODUCT_PACKAGES += init.presto.rc
 
-# lpm
+# Lpm
 PRODUCT_PACKAGES += \
     lpm.rc \
     init.qcom.lpm_boot.sh
-
-# Misc
-PRODUCT_PACKAGES += com.android.future.usb.accessory
 
 # Sensors
 PRODUCT_PACKAGES += sensors.msm8660
 
 # Sky_touch
 PRODUCT_PACKAGES += libsky_touch
-
-# Torch
-PRODUCT_PACKAGES += \
-    Apollo \
-    Torch
-
-# Wallpapers
-PRODUCT_PACKAGES += \
-    Galaxy4 \
-    HoloSpiralWallpaper \
-    MagicSmokeWallpapers \
-    NoiseField \
-    PhaseBeam
 
 #----------------------------------------------------------------------
 
@@ -190,7 +127,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     dev.pm.dyn_samplingrate=1 \
     ro.sf.lcd_density=240
 
-# misc
+# Misc
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.setupwizard.enable_bypass=1 \
     dalvik.vm.lockprof.threshold=500 \
@@ -202,14 +139,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     wifi.interface=wlan0 \
     wifi.supplicant_scan_interval=15
 
-# Propertys spacific for this device
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.vendor.extension_library=/system/lib/libqc-opt.so
-
 #----------------------------------------------------------------------
 
-# inherit device/qcom/common/common.mk
-$(call inherit-product-if-exists, device/pantech/presto/qcom-common.mk)
-
-$(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
+# inherit device/pantech/qcom-common/qcom-common.mk
+$(call inherit-product-if-exists, device/pantech/qcom-common/qcom-common.mk)
 
