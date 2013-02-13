@@ -93,6 +93,10 @@ PRODUCT_COPY_FILES += \
 
 #----------------------------------------------------------------------
 
+# FM Radio
+PRODUCT_PACKAGES += \
+    FmRadioReceiver
+
 # fstab.qcom
 PRODUCT_PACKAGES += fstab.qcom
 

@@ -37,6 +37,7 @@ lib/lib_iec_60958_61937.so
 bin/ATFWD-daemon
 bin/battery_charging
 bin/bridgemgrd
+bin/btld
 bin/btnvtool
 #bin/dalvikvm
 bin/ds_fmc_appd
