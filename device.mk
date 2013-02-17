@@ -44,14 +44,13 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilt/system/etc/audio_policy.conf:system/etc/audio_policy.conf
 
-# BT firmware
+# Bluetooth configuration files
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/prebuilt/system/bin/BCM43291A0_003.001.013.0141.0194.hcd:system/bin/BCM43291A0_003.001.013.0141.0194.hcd \
     system/bluetooth/data/main.conf:system/etc/bluetooth/main.conf
 
-# Configuration scripts
+# Bluetooth firmware BCM
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/recovery.fstab:root/recovery.fstab
+    $(LOCAL_PATH)/prebuilt/system/bin/BCM43291A0_003.001.013.0141.0194.hcd:system/bin/BCM43291A0_003.001.013.0141.0194.hcd
 
 # Firmware
 PRODUCT_COPY_FILES += \
@@ -59,7 +58,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilt/system/etc/firmware/a225_pm4.fw:system/etc/firmware/a225_pm4.fw \
     $(LOCAL_PATH)/prebuilt/system/etc/firmware/a225p5_pm4.fw:system/etc/firmware/a225p5_pm4.fw \
     $(LOCAL_PATH)/prebuilt/system/etc/firmware/a300_pfp.fw:system/etc/firmware/a300_pfp.fw \
-    $(LOCAL_PATH)/prebuilt/system/etc/firmware/a300_pm4.fw:system/etc/firmware/a300_pm4.fw \
+    $(LOCAL_PATH)/prebuilt/system/etc/firmware/a300_pm4.fw:system/etc/firmware/a300_pm4.fw
 
 # IDC
 PRODUCT_COPY_FILES += \
@@ -72,12 +71,16 @@ PRODUCT_COPY_FILES += \
 
 # Media configuration
 PRODUCT_COPY_FILES += \
-    device/pantech/presto/media/media_profiles.xml:system/etc/media_profiles.xml \
-    device/pantech/presto/media/media_codecs.xml:system/etc/media_codecs.xml
+    $(LOCAL_PATH)/media/media_profiles.xml:system/etc/media_profiles.xml \
+    $(LOCAL_PATH)/media/media_codecs.xml:system/etc/media_codecs.xml
 
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml
+
+# Recovery
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/recovery.fstab:root/recovery.fstab
 
 # Thermal configuration
 PRODUCT_COPY_FILES += \
@@ -147,4 +150,3 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # inherit device/pantech/qcom-common/qcom-common.mk
 $(call inherit-product-if-exists, device/pantech/qcom-common/qcom-common.mk)
-

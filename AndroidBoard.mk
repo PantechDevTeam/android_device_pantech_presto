@@ -14,6 +14,8 @@
 # limitations under the License.
 #
 
+#----------------------------------------------------------------------
+
 LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
@@ -39,8 +41,3 @@ LOCAL_SRC_FILES    := $(LOCAL_MODULE)
 LOCAL_MODULE_PATH  := $(TARGET_ROOT_OUT)
 include $(BUILD_PREBUILT)
 
-#----------------------------------------------------------------------
-# extra images
-#----------------------------------------------------------------------
-
-#-include device/pantech/qcom-common/generate_extra_images.mk

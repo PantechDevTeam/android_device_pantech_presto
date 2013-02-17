@@ -14,8 +14,9 @@
 # limitations under the License.
 #
 
-LOCAL_PATH := $(call my-dir)
+#----------------------------------------------------------------------
 
-ifeq ($(TARGET_DEVICE),presto)
+ifneq ($(filter presto,$(TARGET_DEVICE)),)
+    LOCAL_PATH := $(call my-dir)
     include $(call all-subdir-makefiles,$(LOCAL_PATH))
 endif
