@@ -1,8 +1,8 @@
 # Wifi related defines
-#BOARD_HOSTAPD_DRIVER                := WEXT
-#BOARD_HOSTAPD_PRIVATE_LIB           := lib_driver_cmd_wext
+#BOARD_HOSTAPD_DRIVER               := WEXT
+#BOARD_HOSTAPD_PRIVATE_LIB          := lib_driver_cmd_wext
 BOARD_WLAN_DEVICE                   := bcm4329
-#BOARD_WLAN_DEVICE_REV               := bcm4329
+#BOARD_WLAN_DEVICE_REV              := bcm4329
 BOARD_WPA_SUPPLICANT_DRIVER         := WEXT
 BOARD_WPA_SUPPLICANT_PRIVATE_LIB    := lib_driver_cmd_wext
 WIFI_BAND                           := 802_11_ABG

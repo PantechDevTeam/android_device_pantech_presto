@@ -2,6 +2,29 @@
 # Add additional services here
 #
 
+on emmc-fs
+    mkdir /tombstones 0771 system system
+    wait /dev/block/mmcblk0p13
+    mount ext4 /dev/block/mmcblk0p13 /system rw barrier=1
+    wait /dev/block/mmcblk0p15
+    mount ext4 /dev/block/mmcblk0p15 /persist nosuid nodev noatime barrier=1
+    wait /dev/block/mmcblk0p14
+    mount ext4 /dev/block/mmcblk0p14 /data nosuid nodev noatime barrier=1
+    mount ext4 /dev/block/mmcblk0p14 /data nosuid nodev noatime remount noauto_da_all
+    mount ext4 /dev/block/mmcblk0p14 /data nosuid nodev noatime remount discard
+    wait /dev/block/mmcblk0p16
+    mount ext4 /dev/block/mmcblk0p16 /cache nosuid nodev noatime barrier=1
+    wait /dev/block/mmcblk0p25
+    wait /dev/block/mmcblk0p27
+    wait /dev/block/mmcblk0p17
+    mount ext4 /dev/block/mmcblk0p17 /tombstones nosuid nodev barrier=1
+    mkdir /tombstones/modem 0771 system system
+    mkdir /tombstones/mdm 0771 system system
+    mkdir /tombstones/lpass 0771 system system
+    mkdir /firmware 0771 system system
+    wait /dev/block/mmcblk0p1
+    mount vfat /dev/block/mmcblk0p1 /firmware ro shortname=lower
+
 on boot
     # Sensor
     chmod 755 /system/bin/geomagneticd
