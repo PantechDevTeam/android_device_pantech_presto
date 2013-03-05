@@ -82,4 +82,3 @@ PRODUCT_PACKAGES += libsky_touch
 
 # inherit pantech/msm8660-common
 $(call inherit-product-if-exists, device/pantech/msm8660-common/msm8660-common.mk)
-
