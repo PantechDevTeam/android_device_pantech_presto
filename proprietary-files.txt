@@ -141,6 +141,8 @@ lib/liboem_rapi_fusion.so
 # Misc
 lib/libnv_fusion.so
 lib/libsyslog.so
+lib/libfotactl.so
+lib/libcp-proccmd.so
 
 # Radio
 bin/ks
@@ -150,6 +152,8 @@ bin/qmiproxy
 bin/qmuxd
 bin/rild
 bin/rmt_storage
+bin/skytestserver
+bin/time_daemon
 lib/libdsi_netctrl.so
 lib/libdsutils.so
 lib/libidl.so
@@ -159,11 +163,12 @@ lib/libqdp.so
 lib/libqmi.so
 lib/libqmiservices.so
 lib/libqueue.so
-#lib/libreference-ril.so
+lib/libreference-ril.so
 lib/libril-qc-qmi-1.so
 lib/libril-qcril-hook-oem.so
 lib/libril.so
 lib/libtime_genoff.so
+lib/libtime_remote_atom.so
 
 # wifi
 #etc/wifi/wpa_supplicant.conf

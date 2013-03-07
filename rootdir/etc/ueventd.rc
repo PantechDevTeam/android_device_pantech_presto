@@ -16,7 +16,7 @@
 /dev/msm_hw3dc            0666   root       root
 
 # the DIAG device node is not world writable/readable.
-/dev/diag                 0660   system     qcom_diag
+/dev/diag                 0666   root     	root
 
 # gpu driver for adreno200 is globally accessible
 /dev/kgsl                 0666   root       root
@@ -35,6 +35,7 @@
 /dev/eac                  0660   root       audio
 /dev/cam                  0660   root       camera
 /dev/pmem                 0660   system     graphics
+/dev/pmem_audio           0660   system     audio
 /dev/pmem_adsp*           0660   system     audio
 ###
 /dev/pmem_audio           0660   system     audio
@@ -55,8 +56,8 @@
 /dev/lightsensor          0640   system     system
 /dev/msm_pcm_out*         0660   system     audio
 /dev/msm_pcm_in*          0660   system     audio
-#/dev/msm_mvs              0660   system     audio
-#/dev/msm_voicememo        0660   system     audio
+/dev/msm_mvs              0660   system     audio
+/dev/msm_voicememo        0660   system     audio
 /dev/msm_pcm_ctl*         0660   system     audio
 /dev/msm_snd*             0660   system     audio
 /dev/msm_mp3*             0660   system     audio
@@ -106,3 +107,39 @@
 /sys/devices/system/cpu/cpufreq interactive/hispeed_freq    0664    system  system
 /sys/devices/system/cpu/cpufreq interactive/go_hispeed_load 0664    system  system
 /sys/devices/system/cpu/cpufreq interactive/above_hispeed_delay 0664    system  system
+
+
+#more permissions from ICS
+/dev/ttyHS0               0600   bluetooth  bluetooth
+/dev/pmem_smipool*        0660   system     camera
+/dev/radio0               0644   fm_radio   fm_radio
+/dev/i2c-0                0664   root       system
+/dev/i2c-1                0664   root       system
+/dev/i2c-2                0664   root       system
+/dev/i2c-4                0664   root       system
+#FEATURE_SKY_SND_EXTAMPCTRL  // 20110505 jmlee add //20110310 jhsong : sub chip cal tool by youngsoo Lim
+/dev/aud_sub*          0777   system     audio
+/dev/tzcom                0660   system     drmrpc
+/dev/qseecom              0660   system     drmrpc
+/dev/qce                  0660   system     drmrpc
+/dev/qemu_trace           0666   system     system
+/dev/block/mmcblk0p17     0660   system     system
+/dev/block/mmcblk0p18     0660   system     system
+/dev/block/mmcblk0p20     0660   system     system
+/dev/block/mmcblk0p21     0660   system     system
+/dev/block/mmcblk0p22     0660   system     system
+/dev/usb_accessory        0660   root       usb
+/dev/oncrpc/300000ba:00010000  0660   system     drmrpc
+#permissions for audio
+/dev/msm_fm               0660  system       audio
+/dev/msm_acdb             0660  system       audio
+/dev/msm_rtac             0660  system       audio
+/dev/msm_preproc_ctl      0660  system       audio
+/dev/msm_a2dp_in          0640  system       audio
+/sys/devices/virtual/usb_composite/*   enable      0664  root   system
+/sys/devices/virtual/smdpkt/smdcntl*       open_timeout   0664 radio radio
+#permissions for sensors
+/dev/msm_dsps             0660  system       system
+
+
+

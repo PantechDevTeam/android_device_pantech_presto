@@ -60,6 +60,9 @@ PRODUCT_COPY_FILES += \
 # Recovery
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/recovery.fstab:root/recovery.fstab
+#uevent.rc
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/etc/ueventd.rc:root/ueventd.rc
 
 # Wifi (bcmdhd)
 #WIFI_BAND := 802_11_ABG

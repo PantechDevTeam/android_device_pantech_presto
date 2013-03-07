@@ -34,13 +34,29 @@ on boot
     chown system input /sys/class/input/input6/wake
 
 
+#service skytestserver /system/bin/logwrapper /system/bin/skytestserver
+#    class main #DATA_ENCRYPTION
+#    socket skytest stream 666
+#    user root
+
 on post-fs-data
 
     # Sensors
     mkdir /data/misc/sensors 0775 root root
     write /data/system/sensors/settings 0
     chmod 0664 /data/system/sensors/settings
+mkdir /data/trace 0770 system system
+mkdir /dev/pantech 0660
+    chown system system /dev/pantech
 
+   write /sys/power/wake_lock abc
+    exec radiooptions 1
+
+ chmod 0777 /dev/aud_sub*
+#skytest
+service skytestserver /system/bin/logwrapper /system/bin/skytestserver
+    socket skytest stream 666
+    user root
 
 # Sensor daemon
 service orientationd /system/bin/orientationd
