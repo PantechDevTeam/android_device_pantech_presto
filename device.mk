@@ -81,6 +81,9 @@ PRODUCT_PACKAGES += \
 # Sky_touch
 PRODUCT_PACKAGES += libsky_touch
 
+# Radio fixes
+FRAMEWORKS_BASE_SUBDIRS += ../../$(LOCAL_PATH)/ril/
+
 #----------------------------------------------------------------------
 
 # inherit pantech/msm8660-common
