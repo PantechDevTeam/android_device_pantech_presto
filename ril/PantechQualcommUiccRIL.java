@@ -15,7 +15,7 @@ import com.android.internal.telephony.RILConstants;
 import java.util.ArrayList;
 
 /**
- * Custom RIL to handle unique behavior of Hercules/Skyrocket/Note radio
+ * Custom RIL to handle unique behavior of Presto radio
  *
  * {@hide}
  */
@@ -192,7 +192,7 @@ public class PantechQualcommUiccRIL extends QualcommSharedRIL implements Command
         int response[];
 
         // This is a mashup of algorithms used in
-        // LGEQualcommUiccRIL.java and SamsungHCRIL.java
+        // LGEQualcommUiccRIL.java and SamsungQualcommUiccRIL.java
 
         // Get raw data
         response = new int[numInts];
