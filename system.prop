@@ -104,7 +104,9 @@ persist.fuse_sdcard=false
 #
 debug.camera.landscape=true
 
-# System props for telephony
+# Fields for custom RIL
+# MAX PROP NAME is 31 chars --|
+ro.telephony.ril_class=PantechQualcommUiccRIL
 telephony.lteOnGsmDevice=1
 
 # System property for SIM
