@@ -15,3 +15,4 @@ WIFI_DRIVER_MODULE_PATH             := "/system/lib/modules/wlan.ko"
 WPA_SUPPLICANT_VERSION              := VER_0_8_X
 WIFI_EXT_MODULE_PATH                := "/system/lib/modules/librasdioif.ko"
 WIFI_EXT_MODULE_NAME                := "librasdioif"
+TARGET_CUSTOM_WIFI                  := ../../device/pantech/presto/wifi/presto_wifi.c

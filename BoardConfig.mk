@@ -16,6 +16,8 @@
 
 #----------------------------------------------------------------------
 
+USE_CAMERA_STUB := true
+
 # inherit from the proprietary version
 -include vendor/pantech/presto/BoardConfigVendor.mk
 
@@ -67,7 +69,7 @@ TARGET_QCOM_HDMI_OUT:= false
 
 # Kernel
 BOARD_KERNEL_BASE               := 0x40200000
-BOARD_KERNEL_CMDLINE            := console=ttyHSL0,115200,n8 androidboot.hardware=qcom loglevel=0 no_console_suspend=1
+BOARD_KERNEL_CMDLINE            := console=ttyHSL0,115200,n8 androidboot.hardware=qcom loglevel=0 androidboot.emmc=true androidboot.baseband=csfb
 BOARD_KERNEL_PAGESIZE           := 2048
 BOARD_FORCE_RAMDISK_ADDRESS     := 0x41500000
 TARGET_KERNEL_CONFIG            := cyanogenmod_presto_defconfig
@@ -76,9 +78,9 @@ TARGET_KERNEL_SOURCE            := kernel/pantech/p9070
 TARGET_PREBUILT_KERNEL          := device/pantech/presto/prebuilt/kernel/kernel
 
 # SD Card info
-BOARD_SDCARD_DEVICE_PRIMARY := /dev/block/mmcblk1p1
-BOARD_SDCARD_DEVICE_SECONDARY := /dev/block/mmcblk1
-BOARD_SDEXT_DEVICE := /dev/block/mmcblk1p1
+BOARD_SDCARD_DEVICE_PRIMARY     := /dev/block/mmcblk1p1
+BOARD_SDCARD_DEVICE_SECONDARY   := /dev/block/mmcblk1
+BOARD_SDEXT_DEVICE              := /dev/block/mmcblk1p1
 
 # USB
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun%d/file
@@ -88,5 +90,5 @@ BOARD_VOLD_EMMC_SHARES_DEV_MAJOR := true
 BOARD_VOLD_MAX_PARTITIONS := 28
 
 # Wifi
--include device/pantech/presto/wifi.mk
+-include device/pantech/presto/wifi/bcm4329.mk
 

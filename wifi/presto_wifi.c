@@ -223,27 +223,25 @@ const char *get_dhcp_error_string() {
     return dhcp_lasterror();
 }
 
-
-//prestos dumb functions that we need
-
+//ifdef PANTECH_WIFI
 int wifi_get_state() {
-int ret = 0;
-return ret;
-ALOGI("GET_STATE");
+    int ret = 0;
+    return ret;
+    ALOGI("GET_STATE");
 }
 
 int wifi_load_mfg_driver() {
-int ret = 0;
-return ret;
-ALOGI("LOAD_MFG");
+    int ret = 0;
+    return ret;
+    ALOGI("LOAD_MFG");
 }
 
 int wifi_unload_mfg_driver() {
-int ret = 0;
-return ret;
-ALOGI("UNLOAD_MFG");
+    int ret = 0;
+    return ret;
+    ALOGI("UNLOAD_MFG");
 }
-//end of prestos functions
+//endif
 
 
 int is_wifi_driver_loaded() {

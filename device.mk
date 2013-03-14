@@ -31,6 +31,9 @@ PRODUCT_AAPT_PREF_CONFIG := hdpi
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
+# Radio fixes
+FRAMEWORKS_BASE_SUBDIRS += ../../$(LOCAL_PATH)/ril/
+
 #----------------------------------------------------------------------
 
 LOCAL_KERNEL := $(LOCAL_PATH)/prebuilt/kernel/kernel
@@ -60,9 +63,10 @@ PRODUCT_COPY_FILES += \
 # Recovery
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/recovery.fstab:root/recovery.fstab
-#uevent.rc
+
+# uevent.rc
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/etc/ueventd.rc:root/ueventd.rc
+    $(LOCAL_PATH)/rootdir/etc/ueventd.presto.rc:root/ueventd.rc
 
 # Wifi (bcmdhd)
 #WIFI_BAND := 802_11_ABG
@@ -74,15 +78,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += FmRadioReceiver
 
 # Ramdisk
-PRODUCT_PACKAGES += \
-    init.presto.rc \
-    ueventd.rc
+PRODUCT_PACKAGES += init.presto.rc
 
 # Sky_touch
 PRODUCT_PACKAGES += libsky_touch
-
-# Radio fixes
-FRAMEWORKS_BASE_SUBDIRS += ../../$(LOCAL_PATH)/ril/
 
 #----------------------------------------------------------------------
 
