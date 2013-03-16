@@ -45,7 +45,7 @@ on post-fs-data
     mkdir /dev/pantech 0660
     chown system system /dev/pantech
 
-    write /sys/power/wake_lock abc
+#    write /sys/power/wake_lock abc
     exec radiooptions 1
 
     chmod 0777 /dev/aud_sub*
