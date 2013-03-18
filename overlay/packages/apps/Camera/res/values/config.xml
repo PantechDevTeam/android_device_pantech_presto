@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <bool name="wantsFocusModes">true</bool>
+    <bool name="needsEarlyVideoSize">false</bool>
+    <bool name="usePreferredPreviewSizeForEffects">true</bool>
+    <bool name="ignorePreferredPreviewSizeForVideo">true</bool>
 </resources>
 
