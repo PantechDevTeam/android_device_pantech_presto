@@ -33,7 +33,6 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
 # Radio fixes
 FRAMEWORKS_BASE_SUBDIRS += ../../$(LOCAL_PATH)/ril/
-
 #----------------------------------------------------------------------
 
 LOCAL_KERNEL := $(LOCAL_PATH)/prebuilt/kernel/kernel
@@ -76,7 +75,8 @@ PRODUCT_COPY_FILES += \
 
 # FM Radio
 PRODUCT_PACKAGES += FmRadioReceiver
-
+# Camera
+PRODUCT_PACKAGES += Camera
 # Ramdisk
 PRODUCT_PACKAGES += init.presto.rc
 

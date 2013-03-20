@@ -200,7 +200,7 @@ public class PantechQualcommUiccRIL extends QualcommSharedRIL implements Command
             response[i] = p.readInt();
         }
         Log.d(LOG_TAG, "responseSignalStength BEFORE: mode=" + (mSignalbarCount ? "bars" : "raw") +
-            " gsmDbm=" + response[0] + " gsmEcio=" + response[1] +
+            " gsmDbm=" + response[0] + " gsmEcio=" + response[1] + "2=" + response[2] + "3=" + response[3] + "4=" + response[4] + "5=" + response[5] + "6=" + response[6] + 
             " lteSignalStrength=" + response[7] + " lteRsrp=" + response[8] + " lteRsrq=" + response[9] +
             " lteRssnr=" + response[10] + " lteCqi=" + response[11]);
 
