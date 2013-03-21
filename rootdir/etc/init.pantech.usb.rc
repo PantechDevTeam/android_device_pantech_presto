@@ -1,0 +1,20 @@
+# pantech usb composition
+on usb-charging-mode
+	write /sys/class/android_usb/android0/enable 0
+	write /sys/class/android_usb/android0/f_diag/clients diag
+	write /sys/class/android_usb/android0/f_serial/transports smd
+	write /sys/class/android_usb/android0/functions serial,diag
+	write /sys/devices/platform/android_usb/factory_mode 0
+	write /sys/devices/platform/android_usb/usb_charging_mode 1
+	write /sys/class/android_usb/android0/enable 1
+
+on property:sys.usb.config=*
+    write /sys/class/android_usb/android0/functions $sys.usb.config
+    setprop sys.usb.state $sys.usb.config
+
+on property:persist.service.adb.enable=1
+	start adbd
+
+on property:persist.service.adb.enable=0
+	stop adbd
+
