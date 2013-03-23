@@ -24,7 +24,7 @@ public class PantechQualcommUiccRIL extends QualcommSharedRIL implements Command
     boolean RILJ_LOGD = true;
 
     public static final int INVALID_SNR = 0x7fffffff;
-    private boolean mSignalbarCount = SystemProperties.getBoolean("ro.telephony.sends_barcount", false);
+    private boolean mSignalbarCount = true; //SystemProperties.getBoolean("ro.telephony.sends_barcount", false);
     private Object mSMSLock = new Object();
     private boolean mIsSendingSMS = false;
     public static final long SEND_SMS_TIMEOUT_IN_MS = 30000;
@@ -221,7 +221,8 @@ public class PantechQualcommUiccRIL extends QualcommSharedRIL implements Command
                 default : response[0] &= 0xff; break; // no idea; just pass value through
             }
         } else {
-            response[0] &= 0xff; //gsmDbm
+	response[0] &= 0xff; //gsmDbm
+	
         }
         response[1] = -1; // gsmEcio
 

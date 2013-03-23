@@ -8,7 +8,7 @@ on early-init
     # for backwards compatibility
     symlink /storage/sdcard1 /external_sd
     symlink /sdcard1 /mnt/external_sd
-    export SECONDARY_STORAGE /storage/sdcard1
+#    export SECONDARY_STORAGE /storage/sdcard1
 
 #   mkdir /storage/usbdisk 0755 system system
 #   # for backwards compatibility
