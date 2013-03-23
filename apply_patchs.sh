@@ -14,4 +14,4 @@ patch -p0 -i $PATCH_DIR/camera_2.patch
 ## Patch PowerManagerService.java
 patch -p0 -i $PATCH_DIR/proximity.patch
 ## Patch libhardware_legacy
-patch -p0 -i $PATCH_DIR/wifi.patch
+patch -p0 -i $PATCH_DIR/libhardware.patch

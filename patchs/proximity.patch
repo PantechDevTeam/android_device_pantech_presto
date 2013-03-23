@@ -1,5 +1,5 @@
---- cm/frameworks/base/services/java/com/android/server/PowerManagerService.java	2013-03-23 16:31:39.522805424 +0400
-+++ cm/device/pantech/presto/services/java/com/android/server/PowerManagerService.java	2013-03-23 16:33:53.979472124 +0400
+--- frameworks/base/services/java/com/android/server/PowerManagerService.java	2013-03-23 16:31:39.522805424 +0400
++++ device/pantech/presto/services/java/com/android/server/PowerManagerService.java	2013-03-23 16:33:53.979472124 +0400
 @@ -3734,8 +3734,9 @@
                  boolean proximityTaskQueued = false;
  
