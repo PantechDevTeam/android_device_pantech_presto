@@ -1,0 +1,38 @@
+--- hardware/libhardware_legacy/wifi/wifi.c	2013-03-23 00:44:25.724981829 +0400
++++ device/pantech/presto/wifi/presto_wifi.c	2013-03-19 09:43:50.851230788 +0400
+@@ -139,6 +139,7 @@
+     return 0;
+ }
+ 
++
+ #ifdef SAMSUNG_WIFI
+ char* get_samsung_wifi_type()
+ {
+@@ -222,6 +223,27 @@
+     return dhcp_lasterror();
+ }
+ 
++//ifdef PANTECH_WIFI
++int wifi_get_state() {
++    int ret = 0;
++    return ret;
++    ALOGI("GET_STATE");
++}
++
++int wifi_load_mfg_driver() {
++    int ret = 0;
++    return ret;
++    ALOGI("LOAD_MFG");
++}
++
++int wifi_unload_mfg_driver() {
++    int ret = 0;
++    return ret;
++    ALOGI("UNLOAD_MFG");
++}
++//endif
++
++
+ int is_wifi_driver_loaded() {
+     char driver_status[PROPERTY_VALUE_MAX];
+ #ifdef WIFI_DRIVER_MODULE_PATH
