@@ -1,0 +1,14 @@
+--- /frameworks/base/services/java/com/android/server/PowerManagerService.java
++++ /frameworks/base/services/java/com/android/server/PowerManagerService.java
+@@ -3734,8 +3734,9 @@
+                 boolean proximityTaskQueued = false;
+ 
+                 // compare against getMaximumRange to support sensors that only return 0 or 1
+-                boolean active = (distance >= 0.0 && distance < PROXIMITY_THRESHOLD &&
+-                        distance < mProximitySensor.getMaximumRange());
++                // pantech presto do not support getMaximumRange
++                boolean active = (distance >= 0.0 && distance < PROXIMITY_THRESHOLD/* &&
++                        distance < mProximitySensor.getMaximumRange()*/);
+ 
+                 if (mDebugProximitySensor) {
+                     Slog.d(TAG, "mProximityListener.onSensorChanged active: " + active);
