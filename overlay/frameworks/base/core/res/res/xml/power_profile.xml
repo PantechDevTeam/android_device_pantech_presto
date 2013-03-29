@@ -20,23 +20,23 @@
 <device name="Android">
     <item name="none">0</item>
     <!-- All values are in mAh except as noted -->
-    <item name="screen.on">74.5</item>
-    <item name="bluetooth.active">9.9</item>
-    <item name="bluetooth.on">9.7</item>
-    <item name="screen.full">232.8</item>
-    <item name="wifi.on">26.7</item>
-    <item name="wifi.active">99.5</item>
-    <item name="wifi.scan">66.9</item>
+    <item name="screen.on">120</item>
+    <item name="bluetooth.active">120</item>
+    <item name="bluetooth.on">1</item>
+    <item name="screen.full">210</item>
+    <item name="wifi.on">4</item>
+    <item name="wifi.active">120</item>
+    <item name="wifi.scan">220</item>
     <item name="dsp.audio">0.1</item>
     <item name="dsp.video">0.1</item>
-    <item name="radio.active">550.0</item>
+    <item name="radio.active">250</item>
     <!-- The current consumed by the radio when it is scanning for a signal -->
-    <item name="radio.scanning">7.9</item>
-    <item name="gps.on">100.6</item>
+    <item name="radio.scanning">140</item>
+    <item name="gps.on">50</item>
     <!-- Current consumed by the radio at different signal strengths, when paging -->
     <array name="radio.on">
-        <value>2.0</value>
-        <value>5.1</value>
+        <value>4</value>
+        <value>4</value>
     </array>
     <!-- Different CPU speeds as reported in /sys/devices/system/cpu/cpu0/cpufreq/stats/time_in_state -->
     <array name="cpu.speeds">
@@ -68,29 +68,29 @@
     <item name="cpu.idle">3.37</item>
     <!-- Power consumption at different speeds -->
     <array name="cpu.active">
-        <value>407.8</value>
-        <value>420.0</value>
-        <value>426.9</value>
-        <value>432.5</value>
-        <value>438.4</value>
-        <value>442.5</value>
-        <value>448.0</value>
-        <value>457.3</value>
-        <value>466.4</value>
-        <value>473.9</value>
-        <value>484.5</value>
-        <value>494.7</value>
-        <value>505.8</value>
-        <value>515.6</value>
-        <value>524.9</value>
-        <value>534.3</value>
-        <value>544.1</value>
-        <value>552.4</value>
-        <value>566.8</value>
-        <value>581.1</value>
-        <value>595.8</value>
-        <value>603.0</value>
-        <value>608.8</value>
+        <value>55</value>
+        <value>75</value>
+        <value>95</value>
+        <value>120</value>
+        <value>148</value>
+        <value>165</value>
+        <value>190</value>
+        <value>215</value>
+        <value>230</value>
+        <value>249</value>
+        <value>274</value>
+        <value>299</value>
+        <value>324</value>
+        <value>349</value>
+        <value>374</value>
+        <value>399</value>
+        <value>424</value>
+        <value>449</value>
+        <value>474</value>
+        <value>499</value>
+        <value>524</value>
+        <value>549</value>
+        <value>577</value>
     </array>
     <!-- This is the battery capacity in mAh -->
     <item name="battery.capacity">1650</item>
