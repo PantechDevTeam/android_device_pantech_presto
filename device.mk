@@ -71,6 +71,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/init.pantech.usb.rc:root/init.pantech.usb.rc
 
+#CPU MGMNT ##binary from LG NITRO HD##
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/prebuilt/system/bin/mpdecision:system/bin/mpdecision
+
+
 # Wifi (bcmdhd)
 #WIFI_BAND := 802_11_ABG
 #$(call inherit-product-if-exists, hardware/broadcom/wlan/bcmdhd/firmware/bcm4329/device-bcm.mk)
@@ -87,6 +92,8 @@ PRODUCT_PACKAGES += init.presto.rc
 # Sky_touch
 PRODUCT_PACKAGES += libsky_touch
 
+# audio with Audience A2020
+PRODUCT_PACKAGES += audio.primary.presto
 #----------------------------------------------------------------------
 
 # inherit pantech/msm8660-common

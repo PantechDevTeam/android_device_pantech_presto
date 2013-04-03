@@ -67,6 +67,10 @@ COMMON_GLOBAL_CFLAGS += -DQCOM_FM_ENABLED
 # HDMI
 TARGET_QCOM_HDMI_OUT:= false
 
+#in-cal audio witch Audience A2020
+#COMMON_GLOBAL_CFLAGS += -DPRESTO_AUDIO
+BOARD_HAVE_PRESTO_AUDIO := true
+
 # Kernel
 BOARD_KERNEL_BASE               := 0x40200000
 BOARD_KERNEL_CMDLINE            := console=ttyHSL0,115200,n8 androidboot.hardware=qcom loglevel=0 androidboot.emmc=true androidboot.baseband=csfb

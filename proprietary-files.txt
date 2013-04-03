@@ -99,8 +99,8 @@ lib/pp_proc_plugin.so
 lib/qnet-plugin.so
 lib/tcp-connections.so
 
-# CPU management
-bin/mpdecision
+## CPU management
+#bin/mpdecision
 
 # Firmware
 etc/firmware/cyttsp_8660_ffa.hex
@@ -182,6 +182,10 @@ etc/wl/nvram.txt
 # Yamaha
 bin/geomagneticd
 bin/orientationd
+
+#thermald
+lib/libthermal_mitigation.so
+lib/libthernal_mitigation_fusion.so
 
 # sky
 lib/libsky_access_nand.so

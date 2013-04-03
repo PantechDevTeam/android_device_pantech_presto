@@ -51,7 +51,7 @@ on post-fs-data
     chmod 0777 /dev/aud_sub*
 
 #skytest
-service skytestserver /system/bin/logwrapper /system/bin/skytestserver
+service skytestserver /system/bin/skytestserver
     socket skytest stream 666
     user root
 
