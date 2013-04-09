@@ -94,6 +94,9 @@ PRODUCT_PACKAGES += libsky_touch
 
 # audio with Audience A2020
 PRODUCT_PACKAGES += audio.primary.presto
+
+# wifi/bt mac helper
+PRODUCT_PACKAGES += hwaddrs
 #----------------------------------------------------------------------
 
 # inherit pantech/msm8660-common

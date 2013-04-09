@@ -32,7 +32,8 @@ on boot
     chown system input /sys/class/input/input6/enable
     chown system input /sys/class/input/input6/delay
     chown system input /sys/class/input/input6/wake
-
+    # Write wifi and bt MACs to files 
+    hwaddrs
 
 on post-fs-data
 
