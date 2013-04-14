@@ -32,8 +32,6 @@ on boot
     chown system input /sys/class/input/input6/enable
     chown system input /sys/class/input/input6/delay
     chown system input /sys/class/input/input6/wake
-    # Write wifi and bt MACs to files 
-    hwaddrs
 
 on post-fs-data
 
@@ -64,3 +62,7 @@ service orientationd /system/bin/orientationd
 service geomagneticd /system/bin/geomagneticd
     user compass
     group system input
+
+# Write wifi and bt MACs to files
+    on property:wifi.interface=wlan0
+    exec /system/bin/hwaddrs
