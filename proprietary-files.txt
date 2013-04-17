@@ -88,16 +88,8 @@ lib/libchromatix_imx074_default_video.so
 lib/libchromatix_imx074_preview.so
 lib/libchromatix_imx074_zsl.so
 
-# Chromium plug-ins
-lib/libcneapiclient.so
-lib/libcneqmiutils.so
+# Diag
 lib/libdiag.so
-lib/libdnshostprio.so
-lib/libnetmonitor.so
-lib/libtcpfinaggr.so
-lib/pp_proc_plugin.so
-lib/qnet-plugin.so
-lib/tcp-connections.so
 
 ## CPU management
 #bin/mpdecision
