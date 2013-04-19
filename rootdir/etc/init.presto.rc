@@ -51,6 +51,7 @@ on post-fs-data
 
 #skytest
 service skytestserver /system/bin/skytestserver
+    class core
     socket skytest stream 666
     user root
 

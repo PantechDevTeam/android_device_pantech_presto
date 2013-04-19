@@ -274,12 +274,13 @@ on property:ro.emmc=1
 
 service hciattach /system/bin/logwrapper /system/bin/brcm_patchram_plus --enable_hci \
     --tosleep 50000 --baudrate 3000000 --use_baudrate_for_download \
-    --patchram /system/bin/BCM43291A0_003.001.013.0141.0194.hcd /dev/ttyHS0
+    --patchram /system/bin/BCM43291A0_003.001.013.0141.0194.hcd \
+	--scopcm=0,1,0,0,0,0,0,0,0,0 \
+	/dev/ttyHS0
     class main
     user bluetooth
     group bluetooth net_bt_admin
     disabled
-    oneshot
 
 #service hciattach_ath3k /system/bin/sh /system/etc/init.ath3k.bt.sh
 #     class late_start
