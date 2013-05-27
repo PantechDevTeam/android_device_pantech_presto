@@ -151,14 +151,14 @@ static uint32_t DEVICE_SND_DEVICE_NR_CT_RX            = 20;  // Close talk TX^M
 static uint32_t DEVICE_SND_DEVICE_NR_CT_TX            = 21;  // Close talk RX^M
 static uint32_t DEVICE_SND_DEVICE_NR_FT_RX            = 22;  // Far talk(speaker phone) TX^M
 static uint32_t DEVICE_SND_DEVICE_NR_FT_TX            = 23;  // Far talk(speaker phone) RX^M
-static uint32_t DEVICE_SND_DEVICE_NR_DV_TX            = 24;  // desk talk(speaker phone) TX^M
-static uint32_t DEVICE_SND_DEVICE_NR_DV_RX            = 25;  // desk talk(speaker phone) RX^M
+static uint32_t DEVICE_SND_DEVICE_NR_DV_RX            = 24;  // desk talk(speaker phone) TX^M
+static uint32_t DEVICE_SND_DEVICE_NR_DV_TX            = 25;  // desk talk(speaker phone) RX^M
 static uint32_t DEVICE_SND_DEVICE_NR_OFF_CT_RX        = 26;  // Close talk TX^M
 static uint32_t DEVICE_SND_DEVICE_NR_OFF_CT_TX        = 27;  // Close talk RX^M
 static uint32_t DEVICE_SND_DEVICE_NR_OFF_FT_RX        = 28;  // Far talk(speaker phone) TX^M
 static uint32_t DEVICE_SND_DEVICE_NR_OFF_FT_TX        = 29;  // Far talk(speaker phone) RX^M
-static uint32_t DEVICE_SND_DEVICE_NR_OFF_DV_TX        = 30;  // desk TX^M
-static uint32_t DEVICE_SND_DEVICE_NR_OFF_DV_RX        = 31;  // desk RX^M
+static uint32_t DEVICE_SND_DEVICE_NR_OFF_DV_RX        = 30;  // desk TX^M
+static uint32_t DEVICE_SND_DEVICE_NR_OFF_DV_TX        = 31;  // desk RX^M
 static uint32_t DEVICE_SND_DEVICE_NR_ON_2MIC_TX	      = 32;
 static uint32_t DEVICE_SND_DEVICE_NR_OFF_CT_1MIC_RX   = 62;  // nr_off_ct_1mic_rx
 static uint32_t DEVICE_SND_DEVICE_NR_OFF_CT_1MIC_TX   = 63;  // nr_off_ct_1mic_rx
@@ -336,7 +336,6 @@ void addToTable(int decoder_id,int device_id,int device_id_tx,int stream_type,bo
     //add new Node to head.
     temp_ptr->next =head->next;
     head->next = temp_ptr;
-
 }
 
 bool isStreamOn(int Stream_type) {
@@ -1837,11 +1836,8 @@ static status_t do_route_audio_rpc(uint32_t device,
             ALOGI("Falling back to HANDSET_CALL_RX AND HANDSET_CALL_TX as no DUALMIC_HANDSET_TX support found");
         }
     }
-#endif
-
-
-#ifdef PRESTO_AUDIO
-    else if(device == SND_DEVICE_NR_CT) {
+    
+	else if(device == SND_DEVICE_NR_CT) {
         new_rx_device = DEVICE_SND_DEVICE_NR_CT_RX;
         new_tx_device = DEVICE_SND_DEVICE_NR_CT_TX;
         ALOGI("In SND_DEVICE_NR_CT");
@@ -1850,9 +1846,7 @@ static status_t do_route_audio_rpc(uint32_t device,
             ALOGI("Falling back to HANDSET_CALL_RX AND HANDSET_CALL_TX as no DUALMIC_HANDSET_TX support found");
         }
     }
-#endif
 
-#ifdef PRESTO_AUDIO
     else if(device == SND_DEVICE_NR_FT) {
         new_rx_device = DEVICE_SND_DEVICE_NR_FT_RX;
         new_tx_device = DEVICE_SND_DEVICE_NR_FT_TX;
@@ -1862,9 +1856,7 @@ static status_t do_route_audio_rpc(uint32_t device,
             ALOGI("Falling back to HANDSET_CALL_RX AND HANDSET_CALL_TX as no DUALMIC_HANDSET_TX support found");
         }
     }
-#endif
 
-#ifdef PRESTO_AUDIO
     else if(device == SND_DEVICE_NR_OFF_FT) {
         new_rx_device = DEVICE_SND_DEVICE_NR_OFF_FT_RX;
         new_tx_device = DEVICE_SND_DEVICE_NR_OFF_FT_TX;
@@ -2636,12 +2628,7 @@ status_t AudioHardware::doRouting(AudioStreamInMSM8x60 *input)
     }
 
     if (dualmic_enabled) {
-#ifdef SAMSUNG_AUDIO
-        if (sndDevice == SND_DEVICE_HANDSET) {
-            ALOGI("Routing audio to Handset with DualMike enabled\n");
-            sndDevice = SND_DEVICE_IN_S_SADC_OUT_HANDSET;
-        }
-#elifdef PRESTO_AUDIO
+#ifdef PRESTO_AUDIO
         if (sndDevice == SND_DEVICE_HANDSET) {
             ALOGI("Routing audio to Handset with DualMike enabled\n");
             sndDevice = SND_DEVICE_NR_CT;
@@ -2661,6 +2648,7 @@ status_t AudioHardware::doRouting(AudioStreamInMSM8x60 *input)
         }
 #endif
     }
+
 #ifdef SAMSUNG_AUDIO
     if (mMode == AudioSystem::MODE_IN_CALL) {
         if ((!dualmic_enabled) && (sndDevice == SND_DEVICE_HANDSET)) {
@@ -2691,15 +2679,15 @@ status_t AudioHardware::doRouting(AudioStreamInMSM8x60 *input)
 #ifdef PRESTO_AUDIO
     if (mMode == AudioSystem::MODE_IN_CALL) {
         if ((!dualmic_enabled) && (sndDevice == SND_DEVICE_HANDSET)) {
-            ALOGD("Routing audio to Call Handset\n");
+           ALOGD("Routing audio to Call Handset\n");
             sndDevice = SND_DEVICE_NR_OFF_CT;
-        } 
+       } 
 	if ((!dualmic_enabled) && (sndDevice == SND_DEVICE_SPEAKER)) {
             ALOGD("Routing audio to Call Handset\n");
             sndDevice = SND_DEVICE_NR_OFF_FT;
         } 
 
-}
+	}
 #endif
 #ifdef QCOM_FM_ENABLED
     if ((outputDevices & AudioSystem::DEVICE_OUT_FM) && (mFmFd == -1)){
