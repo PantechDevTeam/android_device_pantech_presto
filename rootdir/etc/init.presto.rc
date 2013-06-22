@@ -57,11 +57,13 @@ service skytestserver /system/bin/skytestserver
 
 # Sensor daemon
 service orientationd /system/bin/orientationd
-    user compass
-    group input
+    class core
+    user compass system
+    group input system
 
 service geomagneticd /system/bin/geomagneticd
-    user compass
+    class core
+    user compass system
     group system input
 
 # Write wifi and bt MACs to files

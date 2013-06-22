@@ -38,8 +38,9 @@ int write_mac_to_file(const char *, const char *, ...);
 int main() {
 	int status_bt   = 1;
 	int status_wifi = 2;
+	int i = 0;
 	char buf[PROPERTY_VALUE_MAX] = {0};
-
+	FILE *fd_bt = NULL;
 	//read wifi mac from NV 
 	oncrpc_init(); oncrpc_task_start();
 	nv_cmd_remote(0, NV_WLAN_MAC_ADDRESS_I, &buf);
@@ -49,12 +50,21 @@ int main() {
 		status_wifi = 0;
 	}
 
+
+	//generate random bd_addr
+	if ((fd_bt = fopen("/data/misc/bd_addr","r")) == NULL) 
+	{
+	    buf[0] = 0x00;
+	    buf[1] = 0x0f;
+	    buf[2] = 0xe4;
+		for ( i = 3; i < 6; i++ )
+		    buf[i] = ((int)rand())%256;
 	//read bt mac
-	property_get("service.brcm.bt.mac", buf,"000102030405");
-	if (write_mac_to_file("/data/misc/bd_addr", "%c%c:%c%c:%c%c:%c%c:%c%c:%c%c\n", 
-		buf[0], buf[1], buf[2], buf[3], buf[4], buf[5], buf[6],
-		buf[7], buf[8], buf[9], buf[10], buf[11]) != -1){
-		status_bt = 0;
+	//property_get("service.brcm.bt.mac", buf,"000FE4030405");
+	    if (write_mac_to_file("/data/misc/bd_addr", "%02x:%02x:%02x:%02x:%02x:%02x",
+			buf[0], buf[1], buf[2], buf[3], buf[4], buf[5]) != -1){
+			status_bt = 0;
+	    }
 	}
 	return status_bt + status_wifi;
 }
