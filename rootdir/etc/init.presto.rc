@@ -40,6 +40,14 @@ on post-fs-data
     write /data/system/sensors/settings 0
     chmod 0664 /data/system/sensors/settings
 
+    # for PrestoParts
+    chown root /proc/a2020_gain
+    chmod 0666 /proc/a2020_gain
+    chown root /sys/class/leds/keyboard-backlight/max_brightness
+    chmod 0666 /sys/class/leds/keyboard-backlight/max_brightness
+    chown root /sys/devices/virtual/bdi/179:0/read_ahead_kb
+    chmod 0666 /sys/devices/virtual/bdi/179:0/read_ahead_kb
+
     mkdir /data/trace 0770 system system
     mkdir /dev/pantech 0660
     chown system system /dev/pantech

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+	<!-- defaultValues need to be in sync with the default kernel values! -->
+
+	<PreferenceCategory
+    	android:title="@string/category_sdcard_cache_title">
+`		<!-- sdcard_cache -->
+	    <ListPreference
+	        android:key="sdcard_cache"
+	        android:title="@string/sdcard_cache_title_head"
+	        android:summary="@string/sdcard_cache_summary_head"
+	        android:entries="@array/sdcard_cache_entries"
+	        android:entryValues="@array/sdcard_cache_values"
+	        android:defaultValue="256" />
+	</PreferenceCategory>
+
+	<PreferenceCategory 
+    	android:title="@string/category_incall_audio_title">
+        <CheckBoxPreference
+            android:key="incall_gain"
+            android:title="@string/incall_audio_title_head"
+            android:summary="@string/incall_audio_summary_head"
+            android:defaultValue="0" />
+	</PreferenceCategory>
+	<PreferenceCategory
+	android:title="@string/category_backlightdisable_title">
+	    <CheckBoxPreference
+	        android:key="backlight_disable"
+	        android:title="@string/backlightdisable_title_head"
+	        android:summary="@string/backlightdisable_summary_head"
+	        android:defaultValue="0" />
+	</PreferenceCategory>
+
+</PreferenceScreen>

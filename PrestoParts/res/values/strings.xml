@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Presto Settings</string>
+
+    <string name="category_backlightdisable_title">Backlight</string>
+    <string name="backlightdisable_title_head">Disable Button Backlight</string>
+    <string name="backlightdisable_summary_head">Select to disable the capacitive button backlight</string>
+
+    <string name="category_vibrator_intensity_title">Vibrator</string>
+    <string name="vibrator_intensity_title_head">Vibrator Power Control</string>
+    <string name="vibrator_intensity_summary_head">Select of powerfull haptic feedback or disable</string>
+
+    <string name="category_sdcard_cache_title">SDCard</string>
+    <string name="sdcard_cache_title_head">SDCard Cache size</string>
+    <string name="sdcard_cache_summary_head">Select SDCard Cache size for better speed r/w.</string>
+
+    <string name="category_incall_audio_title">IN-CALL Audio</string>
+    <string name="incall_audio_title_head">CT Earpiece extra gain</string>
+    <string name="incall_audio_summary_head">Select to gain earpiece volume</string>
+
+</resources>

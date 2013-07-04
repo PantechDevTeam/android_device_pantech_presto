@@ -1,0 +1,36 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string-array name="vibrator_intensity_entries">
+        <item>0%</item>
+        <item>25%</item>
+        <item>50%</item>
+        <item>75%</item>
+        <item>100%</item>
+    </string-array>
+
+    <string-array name="vibrator_intensity_values" translatable="false">
+        <item>0</item>
+        <item>60</item>
+        <item>80</item>
+        <item>100</item>
+        <item>120</item>
+    </string-array>
+
+    <string-array name="sdcard_cache_entries">
+        <item>128KB</item>
+        <item>256KB</item>
+        <item>512KB</item>
+        <item>1024KB</item>
+        <item>2048KB</item>
+    </string-array>
+
+    <string-array name="sdcard_cache_values" translatable="false">
+        <item>128</item>
+        <item>256</item>
+        <item>512</item>
+        <item>1024</item>
+        <item>2048</item>
+    </string-array>
+
+
+</resources>

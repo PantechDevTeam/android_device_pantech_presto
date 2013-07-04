@@ -83,7 +83,7 @@ PRODUCT_COPY_FILES += \
 #----------------------------------------------------------------------
 
 # FM Radio
-PRODUCT_PACKAGES += FmRadioReceiver
+#PRODUCT_PACKAGES += FmRadioReceiver
 # Camera
 PRODUCT_PACKAGES += Camera
 # Ramdisk
@@ -91,6 +91,9 @@ PRODUCT_PACKAGES += init.presto.rc
 
 # Sky_touch
 PRODUCT_PACKAGES += libsky_touch
+
+# Presto Settings
+PRODUCT_PACKAGES += PrestoParts
 
 # audio with Audience A2020
 PRODUCT_PACKAGES += audio.primary.presto
