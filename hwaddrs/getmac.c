@@ -51,14 +51,14 @@ int main() {
 	}
 
 
-	//generate random bd_addr
+	//generate bd_addr from wifi mac
 	if ((fd_bt = fopen("/data/misc/bd_addr","r")) == NULL) 
 	{
 	    buf[0] = 0x00;
 	    buf[1] = 0x0f;
 	    buf[2] = 0xe4;
-		for ( i = 3; i < 6; i++ )
-		    buf[i] = ((int)rand())%256;
+	//	for ( i = 3; i < 6; i++ )
+	//	    buf[i] = ((int)rand())%256;
 	//read bt mac
 	//property_get("service.brcm.bt.mac", buf,"000FE4030405");
 	    if (write_mac_to_file("/data/misc/bd_addr", "%02x:%02x:%02x:%02x:%02x:%02x",

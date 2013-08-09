@@ -619,7 +619,7 @@ service charger /charger
 
 on property:init.svc.charger=running
     setprop sys.usb.config adb
-    start rmt_storage
+#    start rmt_storage
 
 # Restart adbd so it can run as root
 on property:service.adb.root=1

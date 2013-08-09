@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Presto Settings</string>
+    <string name="app_name">Advanced Device Settings</string>
 
     <string name="category_backlightdisable_title">Backlight</string>
     <string name="backlightdisable_title_head">Disable Button Backlight</string>

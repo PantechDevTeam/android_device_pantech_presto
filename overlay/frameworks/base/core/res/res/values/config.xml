@@ -24,7 +24,7 @@
     <bool name="config_showNavigationBar">false</bool>
 
     <!-- Our amoled doesn't animate well. -->
-    <bool name="config_animateScreenLights">false</bool>
+    <bool name="config_animateScreenLights">true</bool>
 
     <!-- Component name of the default wallpaper. This will be ImageWallpaper if not
                   specified -->
