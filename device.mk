@@ -80,6 +80,9 @@ PRODUCT_COPY_FILES += \
 
 #----------------------------------------------------------------------
 
+#LIBPOWER
+PRODUCT_PACKAGES += power.msm8660
+
 # Audio
 PRODUCT_PACKAGES += audio.primary.msm8660
 
