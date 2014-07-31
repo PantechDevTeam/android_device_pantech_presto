@@ -114,5 +114,8 @@ BOARD_VOLD_EMMC_SHARES_DEV_MAJOR := true
 BOARD_VOLD_MAX_PARTITIONS := 28
 BOARD_SUPPRESS_EMMC_WIPE := true
 
+#Powerhal variant
+TARGET_POWERHAL_VARIANT := cm
+
 # Wifi
 -include device/pantech/presto/wifi/board-bcm.mk

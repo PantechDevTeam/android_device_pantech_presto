@@ -80,6 +80,9 @@ PRODUCT_COPY_FILES += \
 
 #----------------------------------------------------------------------
 
+#LIBPOWER
+PRODUCT_PACKAGES += power.msm8660
+
 # Audio
 PRODUCT_PACKAGES += audio.primary.msm8660
 
@@ -90,7 +93,7 @@ PRODUCT_PACKAGES += audio.primary.msm8660
 #PRODUCT_PACKAGES += FmRadioReceiver
 
 # Presto Settings
-PRODUCT_PACKAGES += PrestoParts
+#PRODUCT_PACKAGES += PrestoParts
 
 # Ramdisk
 PRODUCT_PACKAGES += \
