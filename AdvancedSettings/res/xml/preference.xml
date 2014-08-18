@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:title="@string/incall_pref">
+
+    <CheckBoxPreference
+        android:title="@string/ear_gain_title"
+        android:defaultValue="false"
+        android:summary="@string/ear_gain_summ"
+        android:key="pref_ear_gain" />
+    </PreferenceCategory>
+</PreferenceScreen>
