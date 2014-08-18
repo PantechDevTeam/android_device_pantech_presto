@@ -2912,7 +2912,7 @@ status_t AudioHardware::doRouting(AudioStreamInMSM8x60 *input, uint32_t outputDe
     }
 #endif
 #ifdef PRESTO_AUDIO
-    if (mMode == AudioSystem::MODE_IN_CALL) {
+    if (mMode == AUDIO_MODE_IN_CALL) {
         if ((!dualmic_enabled) && (sndDevice == SND_DEVICE_HANDSET)) {
             ALOGD("Routing audio to Call Handset\n");
             sndDevice = SND_DEVICE_NR_OFF_CT;
