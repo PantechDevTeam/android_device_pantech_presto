@@ -81,8 +81,8 @@ PRODUCT_COPY_FILES += \
 #----------------------------------------------------------------------
 
 # Audio
-PRODUCT_PACKAGES += audio.primary.msm8660
-
+#PRODUCT_PACKAGES += audio.primary.msm8660
+PRODUCT_PACKAGES += audio.primary.MSM8660_SURF
 # Camera
 #PRODUCT_PACKAGES += camera.presto
 
@@ -90,7 +90,7 @@ PRODUCT_PACKAGES += audio.primary.msm8660
 #PRODUCT_PACKAGES += FmRadioReceiver
 
 # Presto Settings
-#PRODUCT_PACKAGES += PrestoParts
+PRODUCT_PACKAGES += AdvancedSettings
 
 # Ramdisk
 PRODUCT_PACKAGES += \

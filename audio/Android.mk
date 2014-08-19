@@ -78,7 +78,7 @@ LOCAL_STATIC_LIBRARIES := \
     libaudiohw_legacy \
     libaudiopolicy_legacy \
 
-LOCAL_MODULE := audio.primary.presto
+LOCAL_MODULE := audio.primary.MSM8660_SURF
 LOCAL_MODULE_PATH := $(TARGET_OUT_SHARED_LIBRARIES)/hw
 LOCAL_MODULE_TAGS := optional
 
