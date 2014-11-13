@@ -26,9 +26,6 @@ BOARD_VENDOR := pantech
 # Headers path
 TARGET_SPECIFIC_HEADER_PATH := device/pantech/presto/include
 
-# Camera parameters path
-BOARD_CAMERA_EXTRA_PARAMETERS_PATH := device/pantech/presto/camera
-
 # inherit from pantech msm8660-common
 -include device/pantech/msm8660-common/BoardConfigCommon.mk
 
@@ -52,10 +49,9 @@ BOARD_HAS_NO_SELECT_BUTTON := true
 TARGET_BOOTLOADER_BOARD_NAME := MSM8660_SURF
 
 # Camera
-BOARD_PANTECH_CAMERA := true
 BOARD_CAMERA_USE_MM_HEAP := true
 BOARD_NEEDS_MEMORYHEAPPMEM := true
-COMMON_GLOBAL_CFLAGS += -DICS_CAMERA_BLOB -DPANTECH_PRESTO_CAMERA -DNEEDS_VECTORIMPL_SYMBOLS
+COMMON_GLOBAL_CFLAGS += -DICS_CAMERA_BLOB -DNEEDS_VECTORIMPL_SYMBOLS
 TARGET_DISABLE_ARM_PIE := true
 
 # Camera wrapper
